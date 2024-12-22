@@ -1,4 +1,5 @@
 export default function sum(a: string): number | undefined {
-  const numbers = a.split(",").map(Number);
-  return numbers.reduce((acc, curr) => acc + curr, 0);
+  let numbers = a.replace(/\n/g, ",");
+  const numbersArray = numbers.split(",").map(Number);
+  return numbersArray.reduce((acc, curr) => acc + curr, 0);
 }
