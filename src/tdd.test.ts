@@ -38,3 +38,12 @@ test("should handle multiple negative numbers", () => {
 test("should handle multiple negative numbers", () => {
   expect(add("1,-2,1,-4")).toBe("negative numbers not allowed -2, -4");
 });
+
+
+test("should ignore values greater than 1000",() => {
+  expect(add("1,2,1001")).toBe(3);
+})
+
+test("should ignore values greater than 1000",() => {
+  expect(add("//,\n1,2,1001")).toBe(3);
+})

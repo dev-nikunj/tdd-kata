@@ -20,6 +20,7 @@ export default function sum(a: string): any {
         return (exceptions += `, ${curr}`);
       }
     }
+    if (curr > 1000) return acc;
     
     return acc + curr;
   }, 0);
